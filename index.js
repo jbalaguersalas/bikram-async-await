@@ -95,12 +95,32 @@ async function getRandomCharacterInfo (){
   const episodeData = await responseEpisode.json();
 
   return {
-    img:
-    name:
-    episodes:
-    firstEpisode:
-    dateEpisode:
+    img: character.image,
+    name: character.name,
+    episodes: character.episode,
+    firstEpisode: episodeData.name,
+    dateEpisode: episodeData.air_date,
   }
-}
+};
 
 //9.
+async function printCharacterInfo() {
+  const info = await getRandomCharacterInfo();
+
+  const img = document.createElement("img");
+  img.src = info.img;
+  document.body.appendChild(img);
+
+
+  const name = document.createElement("h1");
+  name.innerText = info.name;
+  document.body.appendChild(name);
+
+  const episodes = document.createElement("p");
+  episodes.innerText = `Aparece en ${info.episodes.length}episodios`;
+  document.body.appendChild(episodes);
+
+  const firstEpisode = document.createElement ("p");
+  firstEpisode.innerText =`Primer episodio ${info.firstEpisode}(${info.dateEpisode})`;
+}
+printCharacterInfo();
