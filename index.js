@@ -42,9 +42,11 @@ async function printImageAndName() {
 
 async function getRandomDogImage() {
 
-    const UrlImagenPerroAleatoria = 
+    const response = await fetch (`https://dog.ceo/api/breeds/image/random`);
+    
+    let data = await response.json();
 
-  return;
+    return data.message;
 }
 
 //5.
