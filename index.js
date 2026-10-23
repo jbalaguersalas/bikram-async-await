@@ -50,6 +50,7 @@ async function getRandomDogImage() {
 }
 
 //5.
+
 async function getRandomPokemonImage() {
     const response = await getRandomPokemon()
 }
