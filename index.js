@@ -43,13 +43,16 @@ async function printImageAndName() {
 async function getRandomDogImage() {
 
     const response = await fetch (`https://dog.ceo/api/breeds/image/random`);
-    
+
     let data = await response.json();
 
     return data.message;
 }
 
 //5.
+async function getRandomPokemonImage() {
+    const response = await getRandomPokemon()
+}
 
 //6.
 
