@@ -1,7 +1,7 @@
 //DESARROLLA AQUI TUS SOLUCIONES
 //1.
 async function getRandomPokemon(){
-
+const PokemonAleatorio = Math.floor(Math.random()*1025)
 }
 //2.
 async function getImageAndName (pokemon){
