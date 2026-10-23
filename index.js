@@ -1,17 +1,21 @@
 //DESARROLLA AQUI TUS SOLUCIONES
 //1.
-async function getRandomPokemon(){
-const PokemonAleatorio = Math.floor(Math.random()*1025)
+async function getRandomPokemon() {
+  let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+  let data = await response.json();
+  let name = data.name;
+
+  const PokemonAleatorio = Math.floor(Math.random() * 1025);
+
+  return PokemonAleatorio/name
 }
 //2.
-async function getImageAndName (pokemon){
-
-    let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
-    let data = await response.json();
-    let name = data.name;
-    let img = data.sprites.front_default;
-    return {name, img}
-    
+async function getImageAndName(pokemon) {
+  let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+  let data = await response.json();
+  let name = data.name;
+  let img = data.sprites.front_default;
+  return { name, img };
 }
 //3.
 
