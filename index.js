@@ -1,5 +1,9 @@
 //DESARROLLA AQUI TUS SOLUCIONES
+//1.
+async function getRandomPokemon(){
 
+}
+//2.
 async function getImageAndName (pokemon){
 
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
@@ -9,3 +13,12 @@ async function getImageAndName (pokemon){
     return {name, img}
     
 }
+//3.
+
+//4.
+
+//5.
+
+//6.
+
+//7
